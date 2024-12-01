@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Useless Life Hacks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .content {
+            padding: 20px;
+        }
+        .hack {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Use <s>less</s> full Life Hacks</h1>
+        <p>The best solutions to problems you never knew you had!</p>
+    </header>    
+    <div class="content">
+        <div class="hack" id="hack">
+            Click the button to reveal a usefull life hack!
+        </div>
+        <button onclick="generateHack()">Get a Hack</button>
+    </div>
+
+    <script>
+        const hacks = [
+            "Prevent your brake discs from going rust by applying a light coating of oil or grease to keep out the moisture", 
+            "Always losing in pillow fights? Just add a bag of concrete!", 
+            "Want to warm up your grill faster? Use a hair dryer!", 
+            "Cut Your Tennis Balls In Half To Store Two More Balls In Each Can, Saving Space.", 
+            "Can't see the words on your phone screen? Put it in a glass of water to magnify the texts.", 
+            "Take A Selfie Through A Toilet Roll Tube And Pretend You’re The Moon.", 
+            "Stop buying socks, use a permanent marker instead.", 
+            "Spray Your Headphones With Some “Johnson’s No More Tangles” When They Are Tangled.", 
+            "Turn your extra bottle cap into spherical fruit holders for fruits like apple or orange!", 
+            "Save time brushing your teeth by putting toothpaste in your food instead.", 
+            "Don't want to do something? Just don't do it, problem solved.", 
+            "Don't throw out old doll heads. You can turn them into handy night lights for your kids.", 
+            "Tired of boiling water everytime you make soup or pasta? Boil a few gallons at the beginning of the week and put them in the fridge for later!", 
+            "Don't want to smoke but feel left out when your friends smoke? Start carrying sparklers instead.", 
+            "Eggs are really healthy for you. Don't like it plain? Add coca, butter, flour, sugar, and bake for 30 minutes.", 
+            "Can't afford to replace your smoke detector? Just spread corns around your house and when you hear cracklling, grab some popcorns and run!", 
+            "Smell gas at home? Light a candle or match to locate the leak until a loud explosion reveals the source of the gas.", 
+            "If your car is making unsettling noise, turn up your radio until it disappears.", 
+            "Fill a rubber glove with warm water and put it on your hand when you feel alone.", 
+            "Add a bit of magic to your cold by putting glitter in your mouth before you sneeze!", 
+            "Having trouble finding a parking spot? Turn on your hazard light to make you immune to traffic laws and park wherever you want!", 
+            "Feeling lonely? Cut bread into a hand shape so you get a high five when it pops out of the toaster.", 
+            "Take random pills you find sitting around, drugs are no cheap so you really can't afford not to, right?", 
+            "When painting the outside of your house, use a fine detail brush. Larger brush are low quality and use far more paint.", 
+            "Use frozen vegetables when you run out of ice.", 
+            "Make your car twice as fast by changing it from mph to kmh.", 
+            "Microwave your phone for 30 seconds to make sure there's no harmful bacteria in your phone.", 
+            "Inform an officer that you're carrying a weapon by grabbing it and walking towards the officer with it visible in your hand.", 
+            "Don't put gas in your car, the extra weight reduces fuel efficiency.", 
+            "Google Bard once told me ghosts exist. Upon questioning it, it told me to leave them be because if you try to remove them from a house they may take legal action.", 
+            "Concerned about climate change? Just get rid half of Earth's population.", 
+            "Always use two straws when drinking alone to stay prepared for an impromptu guest who may never arrive.", 
+            "Want to be rich? Go to wealthy neighborhoods and ask them to donate to you, around 428 million people have high income so it's guaranteed at least one will donate a generous amount to you!",
+            "" 
+        ];
+
+        let usedHacks = [];
+
+        function generateHack() {
+            if (usedHacks.length === hacks.length) {
+                usedHacks = [];
+            }
+
+            let newHack;
+            do {
+                newHack = hacks[Math.floor(Math.random() * hacks.length)];
+            } while (usedHacks.includes(newHack)); 
+
+            usedHacks.push(newHack);
+
+            document.getElementById("hack").innerText = newHack;
+        }
+    </script>
+    <img src="https://tenor.com/view/dance-moves-dancing-singer-groovy-gif-17029825.gif" alt="Never gonna give you up!" style="width:300px; height:auto;"/> 
+    <img src="https://tenor.com/view/brain-gif-338783462287106063.gif" style="width:300px; height:auto;"/> 
+    <iframe src="https://giphy.com/embed/l0EQhAiNw3JDCz6kHq" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</body>
+</html>
+
